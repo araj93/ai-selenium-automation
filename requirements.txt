@@ -1,0 +1,6 @@
+selenium
+pytest
+openai
+python-dotenv
+webdriver-manager
+beautifulsoup4
