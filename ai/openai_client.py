@@ -3,11 +3,11 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-USE_MOCK_AI = True  # 🔥 Set False when billing is enabled
+USE_MOCK_AI = True  #  Set False when billing is enabled
 
 def ask_ai(prompt: str) -> str:
     if USE_MOCK_AI:
-        print("🧪 MOCK AI MODE ENABLED")
+        print(" MOCK AI MODE ENABLED")
         print(f"Prompt sent to AI:\n{prompt[:200]}...\n")
         return "//input | //button | //a"  # safe generic XPath fallback
 
@@ -24,5 +24,5 @@ def ask_ai(prompt: str) -> str:
         return response.choices[0].message.content.strip()
 
     except Exception as e:
-        print(f"⚠️ AI ERROR: {e}")
+        print(f" AI ERROR: {e}")
         return "//input | //button | //a"
